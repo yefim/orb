@@ -5,43 +5,38 @@ body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 #wrapper {
-  margin: 60px;
+  margin-top: 10px;
   .descrip {
     font-style: italic;
   }
-  header {
-    h1 {
-      margin: 0;
-      padding: 0;
-    }
-    p {
-      margin: 0;
-      padding: 0;
-    }
+  h1 {
+    margin: 0;
+    padding: 0;
   }
-  section {
-    margin-top: 20px;
-    h2 {
-      margin: 0;
-      padding: 0;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    margin: 5px;
+    a {
+      color: $blue;
+      text-decoration: none;
     }
-    ul {
-      margin: 0;
-      padding: 0;
+    a:hover {
+      color: darken($blue, 15%);
     }
-    li {
-      list-style: none;
-      margin: 5px;
-      a {
-        color: $blue;
-        text-decoration: none;
-      }
-      a:hover {
-        color: darken($blue, 15%);
-      }
-      a.title {
-        font-weight: bold;
-      }
+    a.title {
+      font-weight: bold;
     }
   }
 }

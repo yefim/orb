@@ -3,30 +3,28 @@ body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
 
 #wrapper {
-  margin: 60px; }
+  margin-top: 10px; }
   #wrapper .descrip {
     font-style: italic; }
-  #wrapper header h1 {
+  #wrapper h1 {
     margin: 0;
     padding: 0; }
-  #wrapper header p {
+  #wrapper p {
     margin: 0;
     padding: 0; }
-  #wrapper section {
-    margin-top: 20px; }
-    #wrapper section h2 {
-      margin: 0;
-      padding: 0; }
-    #wrapper section ul {
-      margin: 0;
-      padding: 0; }
-    #wrapper section li {
-      list-style: none;
-      margin: 5px; }
-      #wrapper section li a {
-        color: #4183c4;
-        text-decoration: none; }
-      #wrapper section li a:hover {
-        color: #2c5d8d; }
-      #wrapper section li a.title {
-        font-weight: bold; }
+  #wrapper h2 {
+    margin: 0;
+    padding: 0; }
+  #wrapper ul {
+    margin: 0;
+    padding: 0; }
+  #wrapper li {
+    list-style: none;
+    margin: 5px; }
+    #wrapper li a {
+      color: #4183c4;
+      text-decoration: none; }
+    #wrapper li a:hover {
+      color: #2c5d8d; }
+    #wrapper li a.title {
+      font-weight: bold; }
