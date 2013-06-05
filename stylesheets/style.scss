@@ -1,7 +1,6 @@
 $blue: #4183c4;
 
 body {
-  background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 #wrapper {
@@ -37,6 +36,30 @@ body {
     }
     a.title {
       font-weight: bold;
+    }
+  }
+  .links {
+    margin-top: 20px;
+    a {
+      font-size: 20pt;
+      color: #b9b9b9;
+      padding: 20px 20px 20px 0;
+      transition: color .25s linear;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    .tw:hover {
+      color: #6dae6e;
+    }
+    .gh:hover {
+      color: #d4a057;
+    }
+    .gm:hover {
+      color: #fd2f31;
+    }
+    .ré:hover {
+      color: #d4a057;
     }
   }
 }

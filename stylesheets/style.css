@@ -1,5 +1,5 @@
+@charset "UTF-8";
 body {
-  background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
 
 #wrapper {
@@ -28,3 +28,20 @@ body {
       color: #2c5d8d; }
     #wrapper li a.title {
       font-weight: bold; }
+  #wrapper .links {
+    margin-top: 20px; }
+    #wrapper .links a {
+      font-size: 20pt;
+      color: #b9b9b9;
+      padding: 20px 20px 20px 0;
+      transition: color .25s linear; }
+    #wrapper .links a:hover {
+      text-decoration: none; }
+    #wrapper .links .tw:hover {
+      color: #6dae6e; }
+    #wrapper .links .gh:hover {
+      color: #d4a057; }
+    #wrapper .links .gm:hover {
+      color: #fd2f31; }
+    #wrapper .links .ré:hover {
+      color: #d4a057; }
