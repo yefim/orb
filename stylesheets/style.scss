@@ -1,4 +1,6 @@
 $blue: #4183c4;
+$tw-color: #a4cbec;
+$gh-color: #6dae6e;
 
 body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -44,8 +46,8 @@ body {
       font-size: 20pt;
       color: #b9b9b9;
       padding: 20px 0 20px 0;
-      transition: color .25s linear;
-      transition: opacity .5s ease-in-out;
+      /* font transitions included */
+      transition: all .25s linear;
     }
     a:hover {
       text-decoration: none;
@@ -54,11 +56,11 @@ body {
       opacity: 0;
     }
     .tw:hover {
-      color: #6dae6e;
+      color: $tw-color;
     }
     .tw:hover ~ .rest {
       opacity: 1;
-      color: #6dae6e;
+      color: $tw-color;
     }
     /* so I needed the g"it"hub to not take up any space
      * the obvious method was to try display: none
@@ -69,7 +71,7 @@ body {
       font-size: 0pt;
     }
     .gh:hover {
-      color: #d4a057;
+      color: $gh-color;
     }
     .g:hover ~ .it {
       font-size: 20pt;
@@ -77,7 +79,7 @@ body {
     .g:hover ~ .h,
     .g:hover ~ .rest {
       opacity: 1;
-      color: #d4a057;
+      color: $gh-color;
     }
     .gm:hover {
       color: #fd2f31;

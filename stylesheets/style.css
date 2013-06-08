@@ -39,27 +39,27 @@ body {
       font-size: 20pt;
       color: #b9b9b9;
       padding: 20px 0 20px 0;
-      transition: color .25s linear;
-      transition: opacity .5s ease-in-out; }
+      /* font transitions included */
+      transition: all .25s linear; }
     #wrapper .links a:hover {
       text-decoration: none; }
     #wrapper .links .rest {
       opacity: 0; }
     #wrapper .links .tw:hover {
-      color: #6dae6e; }
+      color: #a4cbec; }
     #wrapper .links .tw:hover ~ .rest {
       opacity: 1;
-      color: #6dae6e; }
+      color: #a4cbec; }
     #wrapper .links .it {
       font-size: 0pt; }
     #wrapper .links .gh:hover {
-      color: #d4a057; }
+      color: #6dae6e; }
     #wrapper .links .g:hover ~ .it {
       font-size: 20pt; }
     #wrapper .links .g:hover ~ .h,
     #wrapper .links .g:hover ~ .rest {
       opacity: 1;
-      color: #d4a057; }
+      color: #6dae6e; }
     #wrapper .links .gm:hover {
       color: #fd2f31; }
     #wrapper .links .gm:hover ~ .rest {
