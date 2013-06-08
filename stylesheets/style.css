@@ -29,19 +29,46 @@ body {
     #wrapper li a.title {
       font-weight: bold; }
   #wrapper .links {
-    margin-top: 20px; }
-    #wrapper .links a {
+    margin-top: 20px;
+    /* so I needed the g"it"hub to not take up any space
+     * the obvious method was to try display: none
+     * however, that FUCKS up animations
+     * apparently changing the font-size does not :)
+     */ }
+    #wrapper .links a, #wrapper .links .rest {
       font-size: 20pt;
       color: #b9b9b9;
-      padding: 20px 20px 20px 0;
-      transition: color .25s linear; }
+      padding: 20px 0 20px 0;
+      transition: color .25s linear;
+      transition: opacity .5s ease-in-out; }
     #wrapper .links a:hover {
       text-decoration: none; }
+    #wrapper .links .rest {
+      opacity: 0; }
     #wrapper .links .tw:hover {
       color: #6dae6e; }
+    #wrapper .links .tw:hover ~ .rest {
+      opacity: 1;
+      color: #6dae6e; }
+    #wrapper .links .it {
+      font-size: 0pt; }
     #wrapper .links .gh:hover {
+      color: #d4a057; }
+    #wrapper .links .g:hover ~ .it {
+      font-size: 20pt; }
+    #wrapper .links .g:hover ~ .h,
+    #wrapper .links .g:hover ~ .rest {
+      opacity: 1;
       color: #d4a057; }
     #wrapper .links .gm:hover {
       color: #fd2f31; }
+    #wrapper .links .gm:hover ~ .rest {
+      opacity: 1;
+      color: #fd2f31; }
     #wrapper .links .ré:hover {
       color: #d4a057; }
+    #wrapper .links .ré:hover ~ .rest {
+      opacity: 1;
+      color: #d4a057; }
+    #wrapper .links .bl:hover {
+      color: #6dae6e; }
