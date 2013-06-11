@@ -30,6 +30,12 @@ body {
       font-weight: bold; }
   #wrapper .links {
     margin-top: 20px;
+    /* this is hack #2, hack #1 is below
+     * this hack was used to fix the fact that hovering over 
+     * the 'h' in 'gh' would never have colored in the 'g'
+     * to fix it, I increased 'g''s hit box and passed all the pointer events
+     * from 'h' and 'it' to 'g'
+     */
     /* so I needed the g"it"hub to not take up any space
      * the obvious method was to try display: none
      * however, that FUCKS up animations
@@ -50,8 +56,20 @@ body {
     #wrapper .links .tw:hover ~ .rest {
       opacity: 1;
       color: #a4cbec; }
+    #wrapper .links .g {
+      padding-right: 20px;
+      z-index: 1; }
+    #wrapper .links .h {
+      margin-left: -20px;
+      pointer-events: none;
+      z-index: -1; }
+    #wrapper .links .g:hover ~ .it {
+      margin-left: -20px; }
+    #wrapper .links .g:hover ~ .h {
+      margin-left: 0px; }
     #wrapper .links .it {
-      font-size: 0pt; }
+      font-size: 0pt;
+      pointer-events: none; }
     #wrapper .links .gh:hover {
       color: #6dae6e; }
     #wrapper .links .g:hover ~ .it {

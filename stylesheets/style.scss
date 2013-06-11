@@ -62,6 +62,27 @@ body {
       opacity: 1;
       color: $tw-color;
     }
+    /* this is hack #2, hack #1 is below
+     * this hack was used to fix the fact that hovering over 
+     * the 'h' in 'gh' would never have colored in the 'g'
+     * to fix it, I increased 'g''s hit box and passed all the pointer events
+     * from 'h' and 'it' to 'g'
+     */
+    .g {
+      padding-right: 20px;
+      z-index: 1;
+    }
+    .h {
+      margin-left: -20px;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .g:hover ~ .it {
+      margin-left: -20px;
+    }
+    .g:hover ~ .h {
+      margin-left: 0px;
+    }
     /* so I needed the g"it"hub to not take up any space
      * the obvious method was to try display: none
      * however, that FUCKS up animations
@@ -69,6 +90,7 @@ body {
      */
     .it {
       font-size: 0pt;
+      pointer-events: none;
     }
     .gh:hover {
       color: $gh-color;
