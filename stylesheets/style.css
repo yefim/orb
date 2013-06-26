@@ -51,11 +51,10 @@ body {
       text-decoration: none; }
     #wrapper .links .rest {
       opacity: 0; }
-    #wrapper .links .tw:hover {
-      color: #a4cbec; }
+    #wrapper .links .tw:hover,
     #wrapper .links .tw:hover ~ .rest {
       opacity: 1;
-      color: #a4cbec; }
+      color: #4b73eb; }
     #wrapper .links .g {
       padding-right: 20px;
       z-index: 1; }
@@ -78,15 +77,11 @@ body {
     #wrapper .links .g:hover ~ .rest {
       opacity: 1;
       color: #6dae6e; }
-    #wrapper .links .gm:hover {
-      color: #fd2f31; }
+    #wrapper .links .gm:hover,
     #wrapper .links .gm:hover ~ .rest {
       opacity: 1;
       color: #fd2f31; }
-    #wrapper .links .ré:hover {
-      color: #d4a057; }
+    #wrapper .links .ré:hover,
     #wrapper .links .ré:hover ~ .rest {
       opacity: 1;
       color: #d4a057; }
-    #wrapper .links .bl:hover {
-      color: #6dae6e; }

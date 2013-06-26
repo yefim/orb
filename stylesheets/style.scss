@@ -1,6 +1,8 @@
 $blue: #4183c4;
-$tw-color: #a4cbec;
+$tw-color: #4B73EB;
 $gh-color: #6dae6e;
+$gm-color: #fd2f31;
+$re-color: #d4a057;
 
 body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -55,9 +57,7 @@ body {
     .rest {
       opacity: 0;
     }
-    .tw:hover {
-      color: $tw-color;
-    }
+    .tw:hover,
     .tw:hover ~ .rest {
       opacity: 1;
       color: $tw-color;
@@ -103,22 +103,15 @@ body {
       opacity: 1;
       color: $gh-color;
     }
-    .gm:hover {
-      color: #fd2f31;
-    }
+    .gm:hover,
     .gm:hover ~ .rest {
       opacity: 1;
-      color: #fd2f31;
+      color: $gm-color;
     }
-    .ré:hover {
-      color: #d4a057;
-    }
+    .ré:hover,
     .ré:hover ~ .rest {
       opacity: 1;
-      color: #d4a057;
-    }
-    .bl:hover {
-      color: #6dae6e;
+      color: $re-color;
     }
   }
 }
