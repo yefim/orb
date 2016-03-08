@@ -72,8 +72,8 @@
       var x, y, radial;
 
       $body.on('touchmove, mousemove', function(e) {
-        x = e.pageX || e.targetTouches[0].pageX;
-        y = e.pageY || e.targetTouches[0].pageY;
+        x = e.pageX || e.originalEvent.targetTouches[0].pageX;
+        y = e.pageY || e.originalEvent.targetTouches[0].pageY;
       });
 
       var changeColor = function() {
