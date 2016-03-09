@@ -71,7 +71,9 @@
       var $radial = $('.radial');
       var x, y, radial;
 
-      $body.on('touchmove, mousemove', function(e) {
+      $body.on('touchmove mousemove', function(e) {
+        e.preventDefault();
+
         x = e.pageX || e.originalEvent.targetTouches[0].pageX;
         y = e.pageY || e.originalEvent.targetTouches[0].pageY;
       });
