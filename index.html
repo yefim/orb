@@ -79,9 +79,12 @@
       });
 
       var changeColor = function() {
-        radial = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255, 255, 255, .6) 0%, rgba(255, 255, 255, .6) 30%, rgba(0, 0, 0, .6) 100%';
+        if (x && y) {
+          radial = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255, 255, 255, .6) 0%, rgba(255, 255, 255, .6) 30%, rgba(0, 0, 0, .6) 100%)';
 
-        $radial.css({background: radial});
+          $radial.css({background: radial});
+        }
+
         window.requestAnimationFrame(changeColor);
       };
 
