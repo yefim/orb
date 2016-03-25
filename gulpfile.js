@@ -10,7 +10,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('less', function() {
-  gulp.src('styles/main.less')
+  gulp.src('styles/*.less')
     .pipe(less())
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
