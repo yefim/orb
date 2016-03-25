@@ -1,0 +1,72 @@
+@red: #FF9999;
+@orange: #FFCC99;
+@yellow: #FFFF99;
+@green: #99FF99;
+@blue: #9999FF;
+@indigo: #6B4E82;
+@violet: #D199FF;
+
+@white: white;
+
+@translucent-white: rgba(255, 255, 255, .6);
+@translucent-black: rgba(0, 0, 0, .6);
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pacifico', sans-serif;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+body {
+  animation: colorchange 10s infinite;
+}
+
+.radial {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at 50% 50%, @translucent-white 0%, @translucent-white 30%, @translucent-black 100%);
+}
+
+footer {
+  font-size: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  z-index: 9001;
+  color: @white;
+}
+
+.name {
+  padding-bottom: 10px;
+}
+
+.icons {
+  font-size: 35px;
+}
+
+.icons a {
+  color: @white;
+}
+
+@keyframes colorchange {
+  0%   { background-color: @red; }
+  14%  { background-color: @orange; }
+  28%  { background-color: @yellow; }
+  42%  { background-color: @green; }
+  56%  { background-color: @blue; }
+  70%  { background-color: @indigo; }
+  84%  { background-color: @violet; }
+  100% { background-color: @red; }
+}

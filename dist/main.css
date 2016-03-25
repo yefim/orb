@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pacifico', sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+body {
+  animation: colorchange 10s infinite;
+}
+.radial {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 30%, rgba(0, 0, 0, 0.6) 100%);
+}
+footer {
+  font-size: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  z-index: 9001;
+  color: white;
+}
+.name {
+  padding-bottom: 10px;
+}
+.icons {
+  font-size: 35px;
+}
+.icons a {
+  color: white;
+}
+@keyframes colorchange {
+  0% {
+    background-color: #FF9999;
+  }
+  14% {
+    background-color: #FFCC99;
+  }
+  28% {
+    background-color: #FFFF99;
+  }
+  42% {
+    background-color: #99FF99;
+  }
+  56% {
+    background-color: #9999FF;
+  }
+  70% {
+    background-color: #6B4E82;
+  }
+  84% {
+    background-color: #D199FF;
+  }
+  100% {
+    background-color: #FF9999;
+  }
+}
