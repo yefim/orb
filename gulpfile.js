@@ -4,11 +4,15 @@ var less = require('gulp-less');
 var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
 var cssmin = require('gulp-cssmin');
+var watch = require('gulp-watch');
 
 gulp.task('webserver', function() {
   connect.server({
     livereload: true
   });
+
+  watch('index.html')
+    .pipe(connect.reload());
 });
 
 gulp.task('less', function() {
