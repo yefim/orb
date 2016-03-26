@@ -11,7 +11,7 @@ $body.on('touchmove mousemove', (e) => {
 
 var spotlight = function() {
   if (x && y) {
-    radial = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255, 255, 255, .6) 0%, rgba(255, 255, 255, .6) 30%, rgba(0, 0, 0, .6) 100%)';
+    radial = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255, 255, 255, .6) 30%, rgba(0, 0, 0, .6) 100%)';
 
     $radial.css({background: radial});
   }
