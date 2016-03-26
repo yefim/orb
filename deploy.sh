@@ -5,6 +5,7 @@ rm -rf out || exit 0;
 mkdir out;
 
 gulp build
+cp CNAME out/CNAME
 
 cd out
 git init
