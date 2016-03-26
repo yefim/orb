@@ -41,7 +41,6 @@ body {
 }
 
 footer {
-  font-size: 50px;
   padding-bottom: 30px;
   text-align: center;
   z-index: 9001;
@@ -49,15 +48,21 @@ footer {
 }
 
 .name {
+  font-size: 50px;
   padding-bottom: 10px;
 }
 
-.icons {
-  font-size: 35px;
+.icons a {
+  padding: 4px 10px;
+  display: inline-block;
+  border: 1px @white solid;
+  border-radius: 50%;
+  color: @white;
+  margin-right: 4px;
+}
 
-  a {
-    color: @white;
-  }
+.icons a:last-child {
+  margin-right: 0;
 }
 
 @keyframes colorchange {
