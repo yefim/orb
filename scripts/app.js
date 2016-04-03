@@ -1,6 +1,8 @@
+const MIN_RADIUS = 30;
+
 let $body = $('body');
 let $radial = $('.radial');
-let radius = 30;
+let radius = MIN_RADIUS;
 let x, y, radial;
 
 $body.on('touchmove mousemove', (e) => {
@@ -17,7 +19,7 @@ $body.on('touchstart', (e) => {
 
 $body.pressure({
   change: (force, event) => {
-    radius = Math.max(radius, force * 100);
+    radius = Math.max(MIN_RADIUS, force * 100);
   }
 });
 
