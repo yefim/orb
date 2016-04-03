@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect');
+var concat = require('gulp-concat');
 var less = require('gulp-less');
 var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
@@ -24,10 +25,11 @@ gulp.task('less', function() {
 });
 
 gulp.task('js', function() {
-  gulp.src('scripts/*.js')
+  gulp.src(['scripts/jquery.pressure.min.js', 'scripts/app.js'])
     .pipe(babel({
       presets: ['es2015']
     }))
+    .pipe(concat('bundle.js'))
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
 });
@@ -40,10 +42,11 @@ gulp.task('watch', function() {
 gulp.task('default', ['js', 'less', 'webserver', 'watch']);
 
 gulp.task('jsmin', function() {
-  gulp.src('scripts/*.js')
+  gulp.src(['scripts/jquery.pressure.min.js', 'scripts/app.js'])
     .pipe(babel({
       presets: ['es2015']
     }))
+    .pipe(concat('bundle.js'))
     .pipe(uglify())
     .pipe(gulp.dest('out/dist'));
 });
