@@ -1,5 +1,6 @@
 let $body = $('body');
 let $radial = $('.radial');
+let radius = 30;
 let x, y, radial;
 
 $body.on('touchmove mousemove', (e) => {
@@ -14,9 +15,15 @@ $body.on('touchstart', (e) => {
   y = e.originalEvent.targetTouches[0].pageY;
 });
 
+$body.pressure({
+  change: (force, event) => {
+    radius = Math.max(radius, force * 100);
+  }
+});
+
 var spotlight = function() {
   if (x && y) {
-    radial = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255, 255, 255, .6) 30%, rgba(0, 0, 0, .6) 100%)';
+    radial = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255, 255, 255, .6) ' + radius + '%, rgba(0, 0, 0, .6) 100%)';
 
     $radial.css({background: radial});
   }
