@@ -53,19 +53,43 @@ footer {
 }
 
 .icons a {
-  width: 38px;
-  height: 38px;
-  padding: 4px 10px;
   display: inline-block;
-  border: 1px @white solid;
-  border-radius: 50%;
-  color: @white;
+  background-image: url('../images/icons.png');
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
   outline: none;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 .icons a:last-child {
   margin-right: 0;
+}
+
+.github {
+  background-position: 0 0;
+}
+
+.twitter {
+  background-position: -32px 0;
+}
+
+.email {
+  background-position: -64px 0;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .github:hover {
+    background-position: 0 -32px;
+  }
+
+  .twitter:hover {
+    background-position: -32px -32px;
+  }
+
+  .email:hover {
+    background-position: -64px -32px;
+  }
 }
 
 @keyframes colorchange {
