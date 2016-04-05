@@ -25,7 +25,7 @@ gulp.task('less', function() {
 });
 
 gulp.task('js', function() {
-  gulp.src(['scripts/jquery.pressure.min.js', 'scripts/app.js'])
+  gulp.src(['scripts/vendor/*.js', 'scripts/*.js'])
     .pipe(babel({
       presets: ['es2015']
     }))
@@ -42,7 +42,7 @@ gulp.task('watch', function() {
 gulp.task('default', ['js', 'less', 'webserver', 'watch']);
 
 gulp.task('jsmin', function() {
-  gulp.src(['scripts/jquery.pressure.min.js', 'scripts/app.js'])
+  gulp.src(['scripts/vendor/*.js', 'scripts/*.js'])
     .pipe(babel({
       presets: ['es2015']
     }))
