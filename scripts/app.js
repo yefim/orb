@@ -6,8 +6,6 @@ let radius = MIN_RADIUS;
 let x, y, radial;
 
 $body.on('touchmove mousemove', (e) => {
-  e.preventDefault();
-
   x = e.pageX || e.originalEvent.targetTouches[0].pageX;
   y = e.pageY || e.originalEvent.targetTouches[0].pageY;
 });
