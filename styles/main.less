@@ -66,6 +66,12 @@ footer {
   margin-right: 0;
 }
 
+@media only screen and (min-width: 768px) {
+  .icons a:hover {
+    animation: bounce .2s forwards ease-out;
+  }
+}
+
 .github {
   background-position: 0 0;
 }
@@ -87,4 +93,18 @@ footer {
   70%  { background-color: @indigo; }
   84%  { background-color: @violet; }
   100% { background-color: @red; }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
 }
