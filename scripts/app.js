@@ -18,7 +18,7 @@ $body.on('touchstart', (e) => {
 });
 
 $body.pressure({
-  change: (force, event) => {
+  change: (force) => {
     radius = Math.max(MIN_RADIUS, force * 100);
   }
 });
