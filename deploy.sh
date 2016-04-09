@@ -7,6 +7,7 @@ mkdir out;
 gulp build
 mv CNAME out/CNAME
 mv images out/images
+mv favicons/* out/
 
 cd out
 git init
