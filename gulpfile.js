@@ -25,7 +25,7 @@ gulp.task('less', function() {
 });
 
 gulp.task('js', function() {
-  gulp.src(['scripts/vendor/*.js', 'scripts/*.js'])
+  gulp.src('scripts/*.js')
     .pipe(babel({
       presets: ['es2015']
     }))
@@ -36,13 +36,13 @@ gulp.task('js', function() {
 
 gulp.task('watch', function() {
   gulp.watch('styles/*.less', ['less']);
-  gulp.watch('scripts/**/*.js', ['js']);
+  gulp.watch('scripts/*.js', ['js']);
 });
 
 gulp.task('default', ['js', 'less', 'webserver', 'watch']);
 
 gulp.task('jsmin', function() {
-  gulp.src(['scripts/vendor/*.js', 'scripts/*.js'])
+  gulp.src('scripts/*.js')
     .pipe(babel({
       presets: ['es2015']
     }))
