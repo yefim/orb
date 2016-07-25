@@ -6,6 +6,7 @@ mkdir dist;
 
 webpack -p --config webpack-prod.config.js
 
+mv index.html dist/index.html
 mv CNAME dist/CNAME
 mv favicons/* dist/
 
