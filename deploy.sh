@@ -1,15 +1,15 @@
 #!/bin/bash
 set -e
 
-rm -rf out || exit 0;
-mkdir out;
+rm -rf dist || exit 0;
+mkdir dist;
 
-gulp build
-mv CNAME out/CNAME
-mv images out/images
-mv favicons/* out/
+webpack -p --config webpack-prod.config.js
 
-cd out
+mv CNAME dist/CNAME
+mv favicons/* dist/
+
+cd dist
 git init
 git config user.name "Travis CI"
 git config user.email "yefim323@gmail.com"

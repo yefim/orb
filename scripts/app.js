@@ -1,3 +1,7 @@
+import 'main.less';
+
+import $ from 'jquery';
+
 const MIN_RADIUS = 30;
 
 let $body = $('body');
@@ -17,7 +21,7 @@ $body.on('touchstart', (e) => {
   y = e.originalEvent.targetTouches[0].pageY;
 });
 
-var spotlight = function() {
+const spotlight = () => {
   if (x && y) {
     radial = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255, 255, 255, .6) ' + radius + '%, rgba(0, 0, 0, .6) 100%)';
 
