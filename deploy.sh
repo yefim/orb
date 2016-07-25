@@ -1,16 +1,17 @@
 #!/bin/bash
 set -e
 
-rm -rf dist || exit 0;
-mkdir dist;
+rm -rf out || exit 0;
+mkdir out;
 
 webpack -p --config webpack-prod.config.js
 
-mv index.html dist/index.html
-mv CNAME dist/CNAME
-mv favicons/* dist/
+mv dist out/
+mv index.html out/index.html
+mv CNAME out/CNAME
+mv favicons/* out/
 
-cd dist
+cd out
 git init
 git config user.name "Travis CI"
 git config user.email "yefim323@gmail.com"
