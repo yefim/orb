@@ -1,4 +1,5 @@
 var path = require('path');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   context: __dirname,
@@ -32,7 +33,7 @@ module.exports = {
         test: /\.png$/
       },
       {
-        loader: 'style!css!less',
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader'),
         exclude: /node_modules/,
         test: /\.less$/
       },
@@ -47,5 +48,11 @@ module.exports = {
         },
       }
     ]
-  }
+  },
+
+  plugins: [
+    new ExtractTextPlugin('style.css', {
+      allChunks: true
+    })
+  ]
 };
