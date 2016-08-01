@@ -1,3 +1,5 @@
+require('main.less')
+
 import $ from 'jquery';
 
 const MIN_RADIUS = 30;
