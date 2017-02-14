@@ -4,7 +4,7 @@
   "description": "my personal site",
   "dependencies": {
     "jquery": "^3.1.0",
-    "babel-core": "^6.20.0",
+    "babel-core": "^6.23.1",
     "babel-loader": "^6.2.9",
     "babel-preset-es2015": "^6.18.0",
     "css-loader": "^0.26.1",
