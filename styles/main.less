@@ -9,10 +9,6 @@
 @translucent-white: rgba(255, 255, 255, .6);
 @translucent-black: rgba(0, 0, 0, .6);
 
-* {
-  box-sizing: border-box;
-}
-
 html,
 body {
   margin: 0;
@@ -26,9 +22,6 @@ body {
 }
 
 .radial {
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
   background: radial-gradient(circle at 50% 50%, @translucent-white 30%, @translucent-black 100%);
