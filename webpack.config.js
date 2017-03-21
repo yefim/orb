@@ -1,5 +1,5 @@
 var path = require('path');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -9,19 +9,21 @@ module.exports = {
     path: path.join(__dirname, 'dist')
   },
   resolve: {
-    root: __dirname,
-    modulesDirectories: ['styles', 'scripts', 'node_modules'],
-    extensions: ['', '.js']
+    modules: ['styles', 'scripts', 'node_modules'],
+    extensions: ['.less', '.js']
   },
   module: {
-    loaders: [
+    rules: [
       {
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader'),
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'less-loader']
+        }),
         exclude: /node_modules/,
         test: /\.less$/
       },
       {
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/,
         test: /\.js$/,
         query: {
@@ -33,7 +35,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css', {
+    new ExtractTextPlugin({
+      filename: 'style.css',
       allChunks: true
     })
   ]
