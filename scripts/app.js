@@ -1,31 +1,35 @@
-require('main.less')
+require('main.less');
 
-import $ from 'jquery';
+const $radial = document.querySelector('.radial');
 
-const MIN_RADIUS = 30;
+let x;
+let y;
 
-let $body = $('body');
-let $radial = $('.radial');
-let radius = MIN_RADIUS;
-let x, y, radial;
+const addEventListener = (element, eventNames, listener) => {
+  const events = eventNames.split(' ');
 
-$body.on('touchmove mousemove', (e) => {
-  e.preventDefault();
+  for (let i = 0; i < events.length; i++) {
+    element.addEventListener(events[i], listener, false);
+  }
+};
 
-  x = e.pageX || e.originalEvent.targetTouches[0].pageX;
-  y = e.pageY || e.originalEvent.targetTouches[0].pageY;
+addEventListener(document, 'touchmove mousemove', (e) => {
+  x = e.clientX;
+  y = e.clientY;
 });
 
+/*
 $body.on('touchstart', (e) => {
   x = e.originalEvent.targetTouches[0].pageX;
   y = e.originalEvent.targetTouches[0].pageY;
 });
+*/
 
 const spotlight = () => {
   if (x && y) {
-    radial = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255, 255, 255, .6) ' + radius + '%, rgba(0, 0, 0, .6) 100%)';
+    const radial = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 255, 255, .6) 30%, rgba(0, 0, 0, .6) 100%)`;
 
-    $radial.css({background: radial});
+    $radial.style.background = radial;
   }
 
   window.requestAnimationFrame(spotlight);

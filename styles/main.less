@@ -6,8 +6,6 @@
 @indigo: #6B4E82;
 @violet: #D199FF;
 
-@white: white;
-
 @translucent-white: rgba(255, 255, 255, .6);
 @translucent-black: rgba(0, 0, 0, .6);
 
@@ -15,16 +13,12 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Pacifico', sans-serif;
   height: 100%;
   width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
 }
 
 body {
@@ -40,50 +34,6 @@ body {
   background: radial-gradient(circle at 50% 50%, @translucent-white 30%, @translucent-black 100%);
 }
 
-footer {
-  padding-bottom: 30px;
-  text-align: center;
-  z-index: 9001;
-  color: @white;
-}
-
-.name {
-  font-size: 50px;
-  padding-bottom: 10px;
-}
-
-.icons a {
-  display: inline-block;
-  background-image: url('~icons.png');
-  background-repeat: no-repeat;
-  width: 32px;
-  height: 32px;
-  outline: none;
-  margin-right: 8px;
-}
-
-.icons a:last-child {
-  margin-right: 0;
-}
-
-@media only screen and (min-width: 768px) {
-  .icons a:hover {
-    animation: bounce .2s forwards ease-out;
-  }
-}
-
-.github {
-  background-position: 0 0;
-}
-
-.twitter {
-  background-position: -32px 0;
-}
-
-.email {
-  background-position: -64px 0;
-}
-
 @keyframes colorchange {
   0%   { background-color: @red; }
   14%  { background-color: @orange; }
@@ -93,18 +43,4 @@ footer {
   70%  { background-color: @indigo; }
   84%  { background-color: @violet; }
   100% { background-color: @red; }
-}
-
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-
-  20% {
-    transform: scale(1.5);
-  }
-
-  100% {
-    transform: scale(1.2);
-  }
 }

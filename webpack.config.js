@@ -3,35 +3,18 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   context: __dirname,
-
-  devtool: '#cheap-module-eval-source-map',
-
-  entry: {
-    'app':  './scripts/app.js',
-  },
-
+  entry: './scripts/app.js',
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: 'app.js',
+    path: path.join(__dirname, 'dist')
   },
-
   resolve: {
-    // Absolute path that contains modules
     root: __dirname,
-
-    // Directory names to be searched for modules
-    modulesDirectories: ['images', 'styles', 'scripts', 'node_modules'],
-
+    modulesDirectories: ['styles', 'scripts', 'node_modules'],
     extensions: ['', '.js']
   },
-
   module: {
     loaders: [
-      {
-        loader: 'url',
-        exclude: /node_modules/,
-        test: /\.png$/
-      },
       {
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader'),
         exclude: /node_modules/,
@@ -49,7 +32,6 @@ module.exports = {
       }
     ]
   },
-
   plugins: [
     new ExtractTextPlugin('style.css', {
       allChunks: true
