@@ -12,16 +12,16 @@ const addEventListener = (element, eventNames, listener) => {
 };
 
 addEventListener(document, 'touchmove mousemove', (e) => {
-  x = e.clientX;
-  y = e.clientY;
+  e.preventDefault();
+
+  x = e.clientX || e.targetTouches[0].clientX;
+  y = e.clientY || e.targetTouches[0].clientY;
 });
 
-/*
-$body.on('touchstart', (e) => {
-  x = e.originalEvent.targetTouches[0].pageX;
-  y = e.originalEvent.targetTouches[0].pageY;
+addEventListener(document, 'touchstart', (e) => {
+  x = e.targetTouches[0].clientX;
+  y = e.targetTouches[0].clientY;
 });
-*/
 
 const spotlight = () => {
   if (x && y) {
