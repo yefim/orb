@@ -26,7 +26,7 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         test: /\.js$/,
-        query: {
+        options: {
           presets: ['es2015'],
           cacheDirectory: true,
           plugins: ['transform-strict-mode']

@@ -1,4 +1,4 @@
-require('main');
+require('styles');
 
 const $radial = document.querySelector('.radial');
 
