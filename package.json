@@ -9,7 +9,7 @@
     "css-loader": "^0.27.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "less": "^2.7.1",
-    "less-loader": "3.0.0",
+    "less-loader": "4.0.2",
     "style-loader": "^0.15.0",
     "webpack": "^2.2.1"
   }
