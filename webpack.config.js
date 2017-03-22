@@ -27,7 +27,9 @@ module.exports = {
         exclude: /node_modules/,
         test: /\.js$/,
         options: {
-          presets: ['es2015'],
+          presets: [
+            ['env', {modules: false, targets: {browsers: ['last 2 versions']}}]
+          ],
           cacheDirectory: true,
           plugins: ['transform-strict-mode']
         },
