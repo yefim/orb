@@ -1,7 +1,7 @@
 {
-  "name": "yefim",
+  "name": "orb",
   "version": "1.0.0",
-  "description": "my personal site",
+  "description": "orb",
   "scripts": {
     "start": "webpack --watch"
   },
