@@ -1,4 +1,4 @@
-require('styles');
+import 'styles';
 
 let x;
 let y;

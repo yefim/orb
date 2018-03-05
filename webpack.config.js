@@ -10,17 +10,17 @@ module.exports = {
   },
   resolve: {
     modules: ['styles', 'scripts', 'node_modules'],
-    extensions: ['.less', '.js']
+    extensions: ['.css', '.js']
   },
   module: {
     rules: [
       {
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'less-loader']
+          use: ['css-loader']
         }),
         exclude: /node_modules/,
-        test: /\.less$/
+        test: /\.css$/
       },
       {
         loader: 'babel-loader',

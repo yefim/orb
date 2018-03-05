@@ -1,0 +1,42 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  animation: colorchange 10s infinite;
+}
+
+body {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.6) 30%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+@keyframes colorchange {
+  0% {
+    background-color: #FF9999;
+  }
+  14% {
+    background-color: #FFCC99;
+  }
+  28% {
+    background-color: #FFFF99;
+  }
+  42% {
+    background-color: #99FF99;
+  }
+  56% {
+    background-color: #9999FF;
+  }
+  70% {
+    background-color: #6B4E82;
+  }
+  84% {
+    background-color: #D199FF;
+  }
+  100% {
+    background-color: #FF9999;
+  }
+}
