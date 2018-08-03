@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new HtmlWebPackPlugin({template: 'src/index.html'})
+    new HtmlWebPackPlugin({template: 'src/index.html', minify: {collapseWhitespace: true}})
   ],
   module: {
     rules: [
