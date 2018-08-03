@@ -1,4 +1,4 @@
-import 'styles';
+import './styles.css';
 
 let x;
 let y;
