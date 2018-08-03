@@ -6,6 +6,8 @@
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
+  "license": "MIT",
+  "repository": "https://github.com/yefim/orb",
   "dependencies": {
     "autoprefixer": "^9.1.0",
     "babel-core": "^6.26.3",
