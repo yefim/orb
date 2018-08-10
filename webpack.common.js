@@ -1,10 +1,16 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 
 module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new HtmlWebPackPlugin({template: 'src/index.html', minify: {collapseWhitespace: true}})
+    new HtmlWebPackPlugin({
+      template: 'src/index.html',
+      inlineSource: '.(js|css)$',
+      minify: {collapseWhitespace: true}
+    }),
+    new HtmlWebpackInlineSourcePlugin()
   ],
   module: {
     rules: [
