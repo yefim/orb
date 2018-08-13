@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "orb",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js && mv public/ dist/"
+    "dev": "webpack-dev-server --mode=development --config webpack.config.js",
+    "build": "webpack --mode=production --config webpack.config.js",
+    "deploy": "npm run build && mv public/ dist/"
   },
   "license": "MIT",
   "repository": "https://github.com/yefim/orb",

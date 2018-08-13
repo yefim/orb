@@ -7,7 +7,7 @@ A big glowing orb that may or may not fry your GPU, CPU, and every other nearby 
 
 * `npm install`
 
-* `npm start`
+* `npm run dev`
 
 ## Contributors
 
