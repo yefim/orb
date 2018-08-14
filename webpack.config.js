@@ -1,10 +1,12 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
+    new MiniCssExtractPlugin(),
     new HtmlWebPackPlugin({
       template: 'src/index.html',
       inlineSource: '.(js|css)$',
@@ -17,7 +19,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          {loader: MiniCssExtractPlugin.loader},
           'css-loader',
           'postcss-loader'
         ]
