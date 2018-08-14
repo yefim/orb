@@ -11,16 +11,23 @@ const addEventListener = (element, eventNames, listener) => {
   }
 };
 
+const getTouch = (e) => {
+  return e.targetTouches && e.targetTouches[0] || {};
+};
+
 addEventListener(document, 'touchmove mousemove', (e) => {
   e.preventDefault();
 
-  x = e.clientX || e.targetTouches[0].clientX;
-  y = e.clientY || e.targetTouches[0].clientY;
+  const touch = getTouch(e);
+
+  x = e.clientX || touch.clientX;
+  y = e.clientY || touch.clientY;
 });
 
 addEventListener(document, 'touchstart', (e) => {
-  x = e.targetTouches[0].clientX;
-  y = e.targetTouches[0].clientY;
+  const touch = getTouch(e);
+  x = touch.clientX;
+  y = touch.clientY;
 });
 
 const spotlight = () => {
