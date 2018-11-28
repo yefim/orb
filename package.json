@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "orb",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development --config webpack.config.js",
     "build": "webpack --mode=production --config webpack.config.js",
     "deploy": "npm run build && mv public/ dist/"
   },
@@ -21,9 +20,7 @@
     "mini-css-extract-plugin": "^0.4.1",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
     "postcss-loader": "^3.0.0",
-    "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack-cli": "^3.1.0"
   }
 }
