@@ -24,12 +24,6 @@ module.exports = {
           'css-loader',
           'postcss-loader'
         ]
-      },
-      {
-        test: /\.js$/,
-        use: {
-          loader: 'babel-loader'
-        }
       }
     ]
   },

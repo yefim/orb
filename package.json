@@ -9,10 +9,7 @@
   "license": "MIT",
   "repository": "https://github.com/yefim/orb",
   "dependencies": {
-    "@babel/core": "^7.1.6",
-    "@babel/preset-env": "^7.1.6",
     "autoprefixer": "^9.1.1",
-    "babel-loader": "^8.0.4",
     "browserslist": "^4.3.4",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
