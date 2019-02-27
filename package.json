@@ -4,7 +4,7 @@
   "description": "orb",
   "scripts": {
     "build": "webpack --mode=production --config webpack.config.js",
-    "deploy": "npm run build"
+    "deploy": "npm run build && mv google* dist/"
   },
   "license": "MIT",
   "repository": "https://github.com/yefim/orb",
